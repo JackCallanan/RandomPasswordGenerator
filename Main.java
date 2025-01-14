@@ -138,6 +138,164 @@ public class Main {
                 break;
         }    }
 
+    public static void specialcharacters(int passwordlength) {
+        System.out.println("Do you want your password to include:");
+        System.out.println("1. lowercase letters");
+        System.out.println("2. uppercase letters");
+        System.out.println("3. both");
+        int choice = scanner.nextInt();
+
+        String[] specialcharacterpassword = new String[passwordlength];
+        char randomcharacter;
+        int randominteger;
+        int randomspecialcharacter;
+        String specialcharacter1 = "!";
+        String specialcharacter2 = "@";
+        String specialcharacter3 = "_";
+        String specialcharacter4 = "-";
+        String specialcharacter5 = "#";
+        String specialcharacter6 = "$";
+        String specialcharacter7 = "&";
+
+
+
+
+
+
+        switch (choice) {
+            case 1:
+                for (int i = 0; i < passwordlength; i++) {
+                    int randomizetype = random.nextInt(3);
+                    if (randomizetype == 0){
+                        randominteger = random.nextInt(10);
+                        specialcharacterpassword[i] = Integer.toString(randominteger);
+                    } else if (randomizetype == 1){
+                        randomcharacter = (char)(random.nextInt(26) + 'a');
+                        specialcharacterpassword[i] = Character.toString(randomcharacter);
+                    }
+                    else if (randomizetype == 2){
+                        randomspecialcharacter = random.nextInt(7);
+                        if (randomspecialcharacter == 0){
+                            specialcharacterpassword[i] = specialcharacter1;
+                        }
+                        else if (randomspecialcharacter == 1){
+                            specialcharacterpassword[i] = specialcharacter2;
+                        }
+                        else if (randomspecialcharacter == 2){
+                            specialcharacterpassword[i] = specialcharacter3;
+                        }
+                        else if (randomspecialcharacter == 3){
+                            specialcharacterpassword[i] = specialcharacter4;
+                        }
+                        else if (randomspecialcharacter == 4){
+                            specialcharacterpassword[i] = specialcharacter5;
+                        }
+                        else if (randomspecialcharacter == 5){
+                            specialcharacterpassword[i] = specialcharacter6;
+                        }
+                        else if (randomspecialcharacter == 6){
+                            specialcharacterpassword[i] = specialcharacter7;
+                        }
+
+                    }
+                }
+                for (int j = 0; j < specialcharacterpassword.length; j++) {
+                    System.out.print(specialcharacterpassword[j]);
+                }
+                break;
+            case 2:
+                for (int i = 0; i < passwordlength; i++) {
+                    int randomizetype = random.nextInt(3);
+                    if (randomizetype == 0){
+                        randominteger = random.nextInt(10);
+                        specialcharacterpassword[i] = Integer.toString(randominteger);
+                    } else if (randomizetype == 1){
+                        randomcharacter = (char)(random.nextInt(26) + 'a');
+                        char uppercasechar = Character.toUpperCase(randomcharacter);
+                        specialcharacterpassword[i] = Character.toString(uppercasechar);
+                    }
+                    else if (randomizetype == 2){
+                        randomspecialcharacter = random.nextInt(7);
+                        if (randomspecialcharacter == 0){
+                            specialcharacterpassword[i] = specialcharacter1;
+                        }
+                        else if (randomspecialcharacter == 1){
+                            specialcharacterpassword[i] = specialcharacter2;
+                        }
+                        else if (randomspecialcharacter == 2){
+                            specialcharacterpassword[i] = specialcharacter3;
+                        }
+                        else if (randomspecialcharacter == 3){
+                            specialcharacterpassword[i] = specialcharacter4;
+                        }
+                        else if (randomspecialcharacter == 4){
+                            specialcharacterpassword[i] = specialcharacter5;
+                        }
+                        else if (randomspecialcharacter == 5){
+                            specialcharacterpassword[i] = specialcharacter6;
+                        }
+                        else if (randomspecialcharacter == 6){
+                            specialcharacterpassword[i] = specialcharacter7;
+                        }
+
+                    }
+                }
+                for (int j = 0; j < specialcharacterpassword.length; j++) {
+                    System.out.print(specialcharacterpassword[j]);
+                }
+                break;
+            case 3:
+                for (int i = 0; i < passwordlength; i++) {
+                    int randomizetype= random.nextInt(3);
+                    if (randomizetype== 0){
+                        randominteger = random.nextInt(10);
+                        specialcharacterpassword[i] = Integer.toString(randominteger);
+                    } else if (randomizetype == 1){
+                        randomcharacter = (char)(random.nextInt(26) + 'a');
+                        int randomizeupperorlower = random.nextInt(2);
+                        if (randomizeupperorlower == 0){ //lowercase character
+                            specialcharacterpassword[i] = Character.toString(randomcharacter);
+                        }
+                        else if(randomizeupperorlower == 1){ //uppercase character
+                            char uppercasechar = Character.toUpperCase(randomcharacter);
+                            specialcharacterpassword[i] = Character.toString(uppercasechar);
+                        }
+                    }  else if (randomizetype == 2){
+                        randomspecialcharacter = random.nextInt(7);
+                        if (randomspecialcharacter == 0){
+                            specialcharacterpassword[i] = specialcharacter1;
+                        }
+                        else if (randomspecialcharacter == 1){
+                            specialcharacterpassword[i] = specialcharacter2;
+                        }
+                        else if (randomspecialcharacter == 2){
+                            specialcharacterpassword[i] = specialcharacter3;
+                        }
+                        else if (randomspecialcharacter == 3){
+                            specialcharacterpassword[i] = specialcharacter4;
+                        }
+                        else if (randomspecialcharacter == 4){
+                            specialcharacterpassword[i] = specialcharacter5;
+                        }
+                        else if (randomspecialcharacter == 5){
+                            specialcharacterpassword[i] = specialcharacter6;
+                        }
+                        else if (randomspecialcharacter == 6){
+                            specialcharacterpassword[i] = specialcharacter7;
+                        }
+
+                    }
+                }
+                for (int j = 0; j < specialcharacterpassword.length; j++) {
+                    System.out.print(specialcharacterpassword[j]);
+                }
+                break;
+            default:
+                System.out.println("Invalid choice. Please restart the program and try again.");
+                break;
+        }    }
+
+
     public static void main(String[] args) {
 
         System.out.println("Welcome to the random password generator!");
@@ -168,7 +326,8 @@ public class Main {
         System.out.println("Do you want your password to include:");
         System.out.println("1. Numbers only");
         System.out.println("2. Letters only");
-        System.out.println("3. Both numbers and letters");
+        System.out.println("3. Numbers and letters");
+        System.out.println("4. Numbers, letters, and special characters");
 
         int choice = scanner.nextInt();
         switch (choice) {
@@ -181,13 +340,16 @@ public class Main {
             case 3:
                 numandletterpassword(passwordlength);
                 break;
+            case 4:
+                specialcharacters(passwordlength);
+                break;
             default:
                 System.out.println("Invalid choice. Please restart the program and try again.");
                 break;
         }
 
         scanner.close();
-        
+
         System.out.println("Do you want your password to include special characters?");
 
 
